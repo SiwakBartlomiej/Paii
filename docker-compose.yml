@@ -1,0 +1,30 @@
+version: '3.7'
+services:
+  web:
+    build: .
+    container_name: pai_web
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www
+      - /var/www/vendor
+  db:
+    image: mysql:8
+    container_name: pai_mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+    volumes:
+      - mysql-data:/var/lib/mysql
+  myadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pai_phpmyadmin
+    ports:
+      - "8080:80"
+    links:
+      - db
+    depends_on:
+      - db
+volumes:
+  mysql-data:

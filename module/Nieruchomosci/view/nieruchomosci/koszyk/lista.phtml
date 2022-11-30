@@ -1,0 +1,26 @@
+
+
+<table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Typ Oferty</th>
+            <th>Typ Nieruchomości</th>
+            <th>Numer</th>
+            <th>Powierzchnia</th>
+            <th>Cena</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($itemki as $item): ?>
+            <tr>
+                <td><?= $item->id ?></td>
+                <td><?= $item->typ_oferty ?></td>
+                <td><?= $item->typ_nieruchomosci ?></td>
+                <td><?= $item->numer ?></td>
+                <td><?= $item->powierzchnia ?></td>
+                <td><?= $item->cena ?></td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>

@@ -1,0 +1,36 @@
+<h1><?= $tytul ?></h1>
+
+<div class="row">
+    <div class="col-lg-4">
+        <?= $this->form()->openTag($form) ?>
+
+        <div class="form-group">
+            <?= $this->formLabel($form->get('tytul')) ?>
+            <?= $this->formText($form->get('tytul')) ?>
+            <?= $this->formElementErrors($form->get('tytul'), ['class' => 'help-block']) ?>
+        </div>
+        <div class="form-group">
+            <?= $this->formLabel($form->get('id_autora')) ?>
+            <?= $this->formSelect($form->get('id_autora')) ?>
+            <?= $this->formElementErrors($form->get('id_autora'), ['class' => 'help-block']) ?>
+        </div>
+        <div class="form-group">
+            <?= $this->formLabel($form->get('cena')) ?>
+            <?= $this->formText($form->get('cena')) ?>
+            <?= $this->formElementErrors($form->get('cena'), ['class' => 'help-block']) ?>
+        </div>
+        <div class="form-group">
+            <?= $this->formLabel($form->get('liczba_stron')) ?>
+            <?= $this->formText($form->get('liczba_stron')) ?>
+            <?= $this->formElementErrors($form->get('liczba_stron'), ['class' => 'help-block']) ?>
+        </div>
+        <div class="form-group">
+            <?= $this->formLabel($form->get('opis')) ?>
+            <?= $this->formTextarea($form->get('opis')) ?>
+            <?= $this->formElementErrors($form->get('opis'), ['class' => 'help-block']) ?>
+        </div>
+        <?= $this->formSubmit($form->get('zapisz')) ?>
+
+        <?= $this->form()->closeTag($form) ?>
+    </div>
+</div>

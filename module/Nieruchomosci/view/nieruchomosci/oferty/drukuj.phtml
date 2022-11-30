@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<style type="text/css">
+			body {
+				font-family: "DejaVu Serif";
+				font-size: 5mm;
+			}
+			
+			h1 {
+				font-size: 2.0em;
+			}
+			
+			table.dane {
+				width: 50%;
+			}
+			
+			table.dane tr td:first-child {
+				font-weight: bold;
+			}
+			
+			table.dane tr td {
+				background-color: #cacaca;
+				padding: 3mm;
+			}
+		</style>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	</head>
+	<body>
+		<h1>Dane oferty</h1>
+		
+		<table class="dane">
+			<tr>
+				<td>Numer</td>
+				<td><?=$oferta['numer'] ?></td>
+			</tr>
+			<tr>
+				<td>Cena</td>
+				<td><?=$oferta['cena'] ?> zł</td>
+			</tr>
+			<tr>
+				<td>Powierzchnia</td>
+				<td><?=$oferta['powierzchnia'] ?> m<sup>2</sup></td>
+			</tr>
+		</table>
+	</body>
+</html>
